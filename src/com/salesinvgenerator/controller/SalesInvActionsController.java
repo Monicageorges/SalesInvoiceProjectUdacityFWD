@@ -210,7 +210,7 @@ public class SalesInvActionsController implements ActionListener ,ListSelectionL
     }
 
     private void deleteInvoice() {
-       // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         int row = invFrame.getInvoiceTable().getSelectedRow();
         if (row != -1) {
             invFrame.getInvs().remove(row);

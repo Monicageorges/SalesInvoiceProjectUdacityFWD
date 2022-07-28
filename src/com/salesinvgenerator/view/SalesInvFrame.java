@@ -296,8 +296,8 @@ public class SalesInvFrame extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 
-      private ArrayList<InvoiceHeader> invs;
-      private SalesInvActionsController controller = new SalesInvActionsController(this);
+    private ArrayList<InvoiceHeader> invs;
+    private SalesInvActionsController controller = new SalesInvActionsController(this);
    
     private InvoiceHeaderTable invoicesTableModel;
 
