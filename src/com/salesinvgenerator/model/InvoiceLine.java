@@ -9,20 +9,24 @@ package com.salesinvgenerator.model;
  * @author Monica.George
  */
 public class InvoiceLine {
-    
-    private InvoiceHeader invoice;
+   
     private String item;
     private double price;
     private int count;
+    private InvoiceHeader invoice;
    
 
-    public InvoiceLine(InvoiceHeader invoice, String item, double price, int count) {
-        this.invoice = invoice;
+    public InvoiceLine( String item, double price, int count,InvoiceHeader invoice) {
         this.item = item;
         this.price = price;
         this.count = count;
+        this.invoice = invoice;
        
     }
+
+   
+
+  
 
     public InvoiceHeader getInvoice() {
         return invoice;
@@ -57,5 +61,8 @@ public class InvoiceLine {
     }
 
     
-    
+    public double getInvoiceLineTotal() {
+        return price * count;
+    }
+
 }

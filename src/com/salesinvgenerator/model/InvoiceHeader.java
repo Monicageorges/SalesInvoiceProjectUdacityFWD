@@ -48,10 +48,29 @@ public class InvoiceHeader {
     }
 
     public ArrayList<InvoiceLine> getLines() {
+        
+         if (lines == null) {
+            lines = new ArrayList<>();
+        }
         return lines;
     }
 
     public void setLines(ArrayList<InvoiceLine> lines) {
         this.lines = lines;
     }
+     
+
+    public double getInvoiceTotal() {
+        double total = 0.0;
+        for (InvoiceLine line : getLines()) {
+            total += line.getInvoiceLineTotal();
+        }
+        return total;
+    }
+
+    @Override
+    public String toString() {
+        return "InvoiceHeader{" + "number=" + number + ", date=" + date + ", customerName=" + customerName + '}';
+    }
+
 }
